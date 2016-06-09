@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Vagrant a throw away development tool - Kushagra Singh
+    </title>
+    <link rel="alternate" href="http://blog.kushagra.net.in/feed.xml" type="application/rss+xml" title="First, solve the problem. Then, write the code.">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body class="article-detail">
+    <header class="header">
+      <div class="content-wrap">
+        <h1>Vagrant a throw away development tool</h1>
+        <p class="author">Written by <span class="author"><a href="mailto:kushagra43@gmail.com">Kushagra Singh</a></span>
+        </p>
+      </div>
+    </header>
+    <div id="content">
+      <div class="content-wrap">
+        <article class="article">
+          <section class="content"><p>Vagrant is an amzing tool used for making development enviorment which can be created or destroyed very quickly and without much hassle it’s a great throw away develpoment enviorment and also it closely resembles production.
+<span class="more"></span></p>
+<p>You may find a ton of projects on Github that make use of Vagrant for development. However, they use Vagrant for development of the project alone. That may work fine with one off projects or open-source projects. In a real world scenario where you have more than one projects working together, setting them up locally may be difficult but vagrant represents a way in which you can use the same vagrant setup with multiple&nbsp;projects.</p>
+<p>One of my needs was to have multiple projects available in my development environment. You can achieve this with Vagrant using Synced Folders. Synced Folders share a folder on your machine at a specified location on your guest machine. This makes it easy for developers to keep using the tools they love on their host machine (things like IDEs&nbsp;etc.).</p>
+<p>Usually how different projects use Vagrant and Synced Folders is they drop Vagrantfile in the root of the project and share the current directory “.” with the guest machine using Synced&nbsp;Folders.</p>
+<p>The Vagrantfile  will use the Synced Folder feature to share the code like so when you run vagrant up, the above directory is shared and made available in the virtual machine. The scripts in the vagrant/ directory are used for setting up the rest of the things required to run the&nbsp;webapplication.</p>
+<p>Vagrant environments are configured using something called a Vagrantfile. All the configuration related to your Vagrant environment resides here. It describes the type of machine required for your project and how to provision this&nbsp;machine.</p>
+<p>Conclusion</p>
+<ol>
+<li>Using Vagrant and changing it a bit to our needs really helped us have the most critical services set up with ease. Having most of the services set up locally also makes it possible for end-to-end&nbsp;testing.</li>
+<li>Packaging the VMs into Vagrant boxes helps reduce set up time a lot. Otherwise, first run may take really long to&nbsp;complete.</li>
+<li>Development environment is much closer to production environments. We see relatively lesser environment specific&nbsp;bugs.</li>
+</ol>
+</section>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="content-wrap">
+        <div class="nav"><a href="/">« Full blog</a></div>
+        <section class="about">
+        </section>
+        <section class="copy">
+          <p>&copy; 2016 Kushagra &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>
